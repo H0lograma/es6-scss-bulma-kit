@@ -1,0 +1,44 @@
+.hamburger {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40px;
+  height: 28px;
+  cursor: pointer;
+  z-index: 90;
+
+  span {
+    width: 40px;
+    height: 4px;
+    transition: all .4s ease;
+    background-color: $color-garm-strong-grey;
+    opacity: 1;
+    pointer-events: none;
+  }
+
+  &:hover {
+    span {
+      background-color: $color-garm-blue;
+    }
+  }
+}
+
+.sticky-navbar.open {
+  .hamburger span {
+    background-color: $color-garm-white;
+  }
+
+  .hamburger span:nth-child(1n) {
+    transform: translateY(300%) rotate(45deg);
+  }
+
+  .hamburger span:nth-child(2n) {
+    opacity: 0;
+    transform: translateX(110%);
+  }
+
+  .hamburger span:nth-child(3n) {
+    transform: translateY(-300%) rotate(-45deg);
+  }
+}

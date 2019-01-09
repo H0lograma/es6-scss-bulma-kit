@@ -1,0 +1,29 @@
+.foobar {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+
+  &-nav {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    & > li > a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      min-height: 80px;
+      padding: 0 1rem;
+      font-size: 1rem;
+      text-decoration: none;
+      color: $color-garm-strong-grey;
+      outline: none;
+    }
+  }
+
+  &-right {
+    margin-left: auto;
+  }
+}

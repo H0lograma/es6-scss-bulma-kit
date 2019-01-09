@@ -1,0 +1,56 @@
+.padding {
+  &-large {
+    padding: 30px;
+
+    @media (min-width: $breakpoint-large) {
+      & {
+        padding: 75px;
+      }
+    }
+  }
+
+  &-medium {
+    padding: 30px;
+  }
+
+  &-medium-bt {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &-small {
+    padding: 15px;
+  }
+}
+
+.margin {
+  &-large {
+    margin: 75px;
+  }
+
+  &-large-b {
+    margin-bottom: 75px;
+  }
+
+  &-large-bt {
+    margin-top: 75px;
+    margin-bottom: 75px;
+  }
+
+  &-medium {
+    margin: 30px;
+  }
+
+  &-medium-b {
+    margin-bottom: 30px;
+  }
+
+  &-medium-bt {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  &-small {
+    margin: 15px;
+  }
+}

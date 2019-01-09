@@ -1,0 +1,100 @@
+/**
+ * wallop.css
+ *
+ * @fileoverview Default styles for wallop – recommended
+ *
+ * @author Pedro Duarte
+ * @author http://pedroduarte.me/wallop
+ */
+
+.Wallop {
+  position: relative;
+
+  &-list {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &-item {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    &--showPrevious {
+      animation: slideFromLeft .5s .1s linear both;
+    }
+
+    &--hidePrevious {
+      animation: slideToLeft .5s .1s linear both;
+    }
+
+    &--showNext {
+      animation: slideFromRight .5s .1s linear both;
+    }
+
+    &--hideNext {
+      animation: slideToRight .5s .1s linear both;
+    }
+
+    &--hidePrevious, &--hideNext {
+      visibility: visible;
+    }
+
+    &--hidePrevious,
+    &--hideNext { z-index: 2; }
+    &--showPrevious,
+    &--showNext { z-index: 1; }
+
+    &--current {
+      visibility: visible;
+      position: relative;
+    }
+  }
+}
+
+
+@keyframes slideFromLeft {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideToLeft {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes slideToRight {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+}

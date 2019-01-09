@@ -1,0 +1,42 @@
+.garm-button {
+  display: inline-block;
+  padding: 0 1.875rem;
+  line-height: 2.375rem;
+  text-align: center;
+  transition: .2s ease-in-out;
+  transition-property: color, background-color, border-color;
+  box-sizing: border-box;
+
+  & {
+    background-color: transparent;
+    color: lighten($color-garm-strong-grey, 30%);
+    border: 1px solid lighten($color-garm-strong-grey, 30%);
+
+    &:hover, &:focus, &:active {
+      background-color: transparent;
+      color: $color-garm-strong-grey;
+      border: 1px solid $color-garm-strong-grey;
+    }
+  }
+
+  &-white {
+    background-color: transparent;
+    color: #FFF;
+    border: 1px solid #FFF;
+
+    &:hover, &:focus, &:active {
+      background-color: transparent;
+      color: darken(#FFF, 15%);
+      border: 1px solid darken(#FFF, 15%);
+    }
+  }
+
+  &, &:hover, &:focus, &:active {
+    text-decoration: none;
+    outline: none;
+  }
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+}

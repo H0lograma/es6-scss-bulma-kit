@@ -1,0 +1,100 @@
+.carousel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 31.25rem;
+  padding: 4rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+
+  &-list {
+    background-color: $color-garm-deep-blue;
+    color: #FFF;
+
+    > div {
+      width: 100%;
+    }
+
+    h2 {
+      color: #FFF;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+
+      li {
+        span.times {
+          display: inline-block;
+          vertical-align: middle;
+          transition-property: transform;
+          transition-duration: .4s;
+        }
+
+        span.line {
+          display: inline-block;
+          width: 0;
+          height: 1px;
+          border-top: 1px solid $color-garm-white;
+          background-color: $color-garm-white;
+          vertical-align: middle;
+          margin-right: 3px;
+          transition: width .4s;
+        }
+      }
+
+      li.active, li:hover {
+        span.times {
+          transform: rotate(180deg);
+        }
+
+        span.line {
+          width: 30px;
+        }
+      }
+
+      a {
+        color: #FFF;
+
+        &:hover {
+          outline: none;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  &-detail {
+    background-color: $color-garm-grey;
+  }
+
+  &-control {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    &-prev, &-next {
+      color: #FFF;
+      background-color: $color-garm-blue;
+
+      border: none;
+      display: inline-block;
+      box-sizing: border-box;
+      vertical-align: middle;
+      text-align: center;
+      padding: 0 1.375rem;
+      line-height: 1.875rem;
+      font-size: 0.875rem;
+      cursor: pointer;
+      outline: none;
+    }
+  }
+
+  h2, p, a {
+    max-width: 22rem;
+  }
+}

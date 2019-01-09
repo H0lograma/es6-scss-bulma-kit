@@ -1,0 +1,33 @@
+// Garm colors
+$color-garm-deep-blue: #003141;
+$color-garm-blue: #0097C1;
+$color-garm-light-blue: #67C6E7;
+$color-garm-strong-grey: #4D4D4D;
+$color-garm-grey: #EAEAEA;
+$color-garm-light-grey: #F5F7F7;
+$color-garm-white: #FFF;
+
+$colors: () !default;
+$colors: map-merge(
+                (
+                        'deep-blue':$color-garm-deep-blue,
+                        'blue':$color-garm-blue,
+                        'light-blue':$color-garm-light-blue,
+                        'strong-grey':$color-garm-strong-grey,
+                        'grey':$color-garm-grey,
+                        'light-grey':$color-garm-light-grey,
+                        'white':$color-garm-white
+                ),
+                $colors
+);
+
+// UK variables rewrite
+
+// Global
+$global-background: #FFF;
+$global-font-family: 'Fira Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$base-heading-font-weight: 700;
+
+// Navbar
+$navbar-nav-item-color: $color-garm-strong-grey;
+$navbar-nav-item-hover-color: $color-garm-blue;

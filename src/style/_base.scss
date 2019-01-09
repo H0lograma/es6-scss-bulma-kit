@@ -1,0 +1,14 @@
+ul {
+  list-style: none;
+  padding-left: 0 !important;
+}
+
+@each $color, $value in $colors {
+  .garm-text-#{$color} {
+    color: #{$value};
+  }
+
+  .garm-bg-#{$color} {
+    background-color: #{$value};
+  }
+}

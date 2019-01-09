@@ -1,0 +1,70 @@
+.mission-container {
+  margin-bottom: -12rem;
+
+  + section {
+    padding-top: 18rem;
+  }
+}
+
+
+.mission {
+  position: relative;
+
+  &-title {
+    position: relative;
+    padding-left: 4rem;
+    margin-top: 5rem;
+    margin-bottom: -3.5rem;
+    z-index: 1;
+  }
+
+  &-title-list {
+    position: relative;
+    height: 3rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    overflow: hidden;
+  }
+
+  &-title-list-item {
+    position: absolute;
+    color: $color-garm-blue;
+    opacity: 0;
+    z-index: 2;
+
+    &--show {
+      animation: cycle-up-title-item 2.5s;
+    }
+  }
+
+  &-title-item, &-title-list-item {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 3.1rem;
+  }
+}
+
+@keyframes cycle-up-title-item {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  30% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translateY(.1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(-3rem);
+  }
+}
+
