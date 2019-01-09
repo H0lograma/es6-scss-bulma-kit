@@ -1219,6 +1219,11 @@ builtin-status-codes@^3.0.0:
   resolved "https://registry.yarnpkg.com/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz#85982878e21b98e1c66425e03d0174788f569ee8"
   integrity sha1-hZgoeOIbmOHGZCXgPQF0eI9Wnug=
 
+bulma@^0.7.2:
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.7.2.tgz#8e944377b74c7926558830d38d8e19eaf49f5fb6"
+  integrity sha512-6JHEu8U/1xsyOst/El5ImLcZIiE2JFXgvrz8GGWbnDLwTNRPJzdAM0aoUM1Ns0avALcVb6KZz9NhzmU53dGDcQ==
+
 bytes@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/bytes/-/bytes-3.0.0.tgz#d32815404d689699f85a4ea4fa8755dd13a96048"
@@ -5961,11 +5966,6 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-uikit@^3.0.0-rc.25:
-  version "3.0.0-rc.25"
-  resolved "https://registry.yarnpkg.com/uikit/-/uikit-3.0.0-rc.25.tgz#81d4ed1995c9cc8bdba2cf1cf83dc6d7c69031a8"
-  integrity sha512-3RdOdn3kr4N8huG9rpGMg8QenD77/eKsR3nsja7/gIl8MLTlZC6K/R/TCcwpb+VY5duOH9bS5vz+3Gd5XXJ53A==
-
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/unicode-canonical-property-names-ecmascript/-/unicode-canonical-property-names-ecmascript-1.0.4.tgz#2619800c4c825800efdd8343af7dd9933cbe2818"
@@ -6154,11 +6154,6 @@ vm-browserify@0.0.4:
   integrity sha1-XX6kW7755Kb/ZflUOOCofDV9WnM=
   dependencies:
     indexof "0.0.1"
-
-wallop@^2.4.1:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/wallop/-/wallop-2.4.1.tgz#147dad109c51a1a6b940c124be76838ae11ffe73"
-  integrity sha1-FH2tEJxRoaa5QMEkvnaDiuEf/nM=
 
 watchpack@^1.5.0:
   version "1.6.0"

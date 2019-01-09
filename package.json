@@ -29,12 +29,11 @@
     "webpack-dev-server": "^3.1.10",
     "webpack-merge": "^4.1.5"
   },
-  "dependencies": {
-    "uikit": "^3.0.0-rc.25",
-    "wallop": "^2.4.1"
-  },
   "browserslist": [
     "> 2%",
     "last 2 versions"
-  ]
+  ],
+  "dependencies": {
+    "bulma": "^0.7.2"
+  }
 }
