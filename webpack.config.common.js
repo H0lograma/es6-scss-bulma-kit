@@ -1,4 +1,5 @@
 const Path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: ['./src/index.js', './src/style/style.scss'],
@@ -21,7 +22,17 @@ module.exports = {
       {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.twig$/,
+        loader: "twig-loader"
       }
     ]
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: './index.html',
+      template: './src/views/index.twig.js',
+    })
+  ]
 };
