@@ -2,3 +2,16 @@
 //@import "~bulma/sass/elements/button.sass";
 //@import "~bulma/sass/elements/title";
 @import "~bulma";
+
+.navbar-item {
+  &.has-dropdown {
+    .navbar-dropdown {
+      display: none;
+    }
+    &.is-active {
+      .navbar-dropdown {
+        display: block;
+      }
+    }
+  }
+}

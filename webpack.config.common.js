@@ -33,6 +33,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: './index.html',
       template: './src/views/index.twig.js',
+    }),
+    new HtmlWebpackPlugin({
+      filename: './ejemplo.html',
+      template: './src/views/ejemplo.twig.js',
     })
   ]
 };

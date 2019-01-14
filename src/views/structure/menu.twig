@@ -13,19 +13,16 @@
 
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item">
+                <a class="navbar-item {% if index is defined %} is-active {% endif %}" href="./">
                     Home
                 </a>
-
-                <a class="navbar-item">
-                    Documentation
+                <a class="navbar-item {% if ejemplo is defined %} is-active {% endif %}" href="./ejemplo.html">
+                    Example
                 </a>
-
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link">
                         More
                     </a>
-
                     <div class="navbar-dropdown">
                         <a class="navbar-item">
                             About
@@ -43,7 +40,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">

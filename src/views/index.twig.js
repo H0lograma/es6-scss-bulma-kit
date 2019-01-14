@@ -4,6 +4,6 @@ const template = require( './index.twig' );
 //   alt: 'bulma'
 // };
 
-const html = template({title: 'Hola planeta!!!'});
+const html = template({index: true, title: 'Hola planeta!!!'});
 
 module.exports = html;
