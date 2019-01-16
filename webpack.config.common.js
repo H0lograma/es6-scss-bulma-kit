@@ -1,5 +1,12 @@
 const Path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const Glob = require('glob');
+const templates = Glob.sync('*.twig', {cwd: './src/views',}).map(
+  template => new HtmlWebpackPlugin({
+    filename: template.replace('twig', 'html'),
+    template: `./src/views/${template}.js`,
+  })
+);
 
 module.exports = {
   entry: ['./src/index.js', './src/style/style.scss'],
@@ -29,14 +36,5 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      filename: './index.html',
-      template: './src/views/index.twig.js',
-    }),
-    new HtmlWebpackPlugin({
-      filename: './ejemplo.html',
-      template: './src/views/ejemplo.twig.js',
-    })
-  ]
+  plugins: templates
 };
