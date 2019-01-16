@@ -11,17 +11,17 @@ document.addEventListener('DOMContentLoaded', () => {
         // Get the target from the "data-target" attribute
         const target = el.dataset.target;
         const $target = document.getElementById(target);
-        const dropdowns = $target.querySelectorAll('.has-dropdown');
         // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
         el.classList.toggle('is-active');
         $target.classList.toggle('is-active');
-
-        dropdowns.forEach(dropdown =>
-          dropdown.addEventListener('click',() => {
-            dropdown.classList.toggle('is-active');
-          })
-        );
       });
     });
   }
 });
+
+const dropdowns = document.querySelectorAll('.dropdown, .has-dropdown');
+dropdowns.forEach(dropdown =>
+  dropdown.on('click', () => {
+    dropdown.classList.toggle('is-active');
+  })
+);
