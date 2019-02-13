@@ -1,5 +1,6 @@
 const Path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const Glob = require('glob');
 const templates = Glob.sync('*.twig', {cwd: './src/views',}).map(
   template => new HtmlWebpackPlugin({
@@ -28,7 +29,13 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        // use: ['style-loader', 'css-loader', 'sass-loader']
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader?sourceMap',
+          'postcss-loader?sourceMap',
+          'sass-loader?sourceMap',
+        ]
       },
       {
         test: /\.twig$/,
